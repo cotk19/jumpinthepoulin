@@ -23,7 +23,7 @@ export default function Navbar() {
     }`;
 
   return (
-    <nav className="sticky top-0 z-20 border-b border-blue-500 bg-gradient-to-r from-blue-600 to-blue-500 text-white shadow-md">
+    <nav className="sticky top-0 z-20 border-b border-white/20 bg-stone-500/90 backdrop-blur-md text-white shadow-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         <div className="flex items-center gap-8">
           <Link href="/" className="flex items-center gap-2 text-xl font-bold tracking-wide group">
