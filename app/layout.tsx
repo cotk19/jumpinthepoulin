@@ -3,7 +3,7 @@ import Navbar from './components/Navbar';
 
 function getSeasonalImage() {
   const month = new Date().getMonth() + 1;
-  return '/images/winter.jpg';
+  
   if (month >= 3 && month <= 5) return '/images/spring.jpg';
   if (month >= 6 && month <= 8) return '/images/summer.jpg';
   if (month >= 9 && month <= 11) return '/images/fall.jpg';
