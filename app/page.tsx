@@ -52,7 +52,7 @@ export default function Home() {
 
         <div className="overflow-hidden rounded-2xl bg-white shadow-lg">
           <Image
-            src="/images/family-fun.jpg"
+            src="/images/Family-fun.jpg"
             alt="Poulin family featured memory"
             width={900}
             height={600}
