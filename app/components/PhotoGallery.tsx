@@ -47,6 +47,7 @@ export default function PhotoGallery({ photos, title = 'Photo gallery' }: PhotoG
                 className="object-cover transition duration-300 group-hover:scale-105"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition duration-300" />
             </div>
           </button>
         ))}
