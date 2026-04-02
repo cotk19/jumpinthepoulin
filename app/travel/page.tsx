@@ -1,25 +1,48 @@
-export default function Travel() {
-  const trips = [
-    { src: "/images/Edinburgh-Castle.jpg", title: "Edinburgh Castle" },
-    { src: "/images/Inverness-Castle.jpg", title: "Inverness Adventure" },
-    { src: "/images/Denali.jpg", title: "Alaska Vacation" },
-  ];
+import Link from 'next/link';
 
+const trips = [
+  {
+    title: 'Scotland 2025',
+    slug: 'scotland-2025',
+    description: 'Castles, cobblestone streets, Highland views, and great memories.',
+    coverImage: '/images/scotland-2025/full/ed_castle_jw.webp',
+  },
+];
+
+export default function TravelPage() {
   return (
-    <div>
-      <h1 className="text-3xl font-bold text-blue-700">Poulin Adventures</h1>
-      <p className="mt-2 text-gray-700">Photos and stories from our trips!</p>
+    <div className="space-y-10">
+      <section>
+        <h1 className="text-4xl font-bold text-blue-800">Travel Log</h1>
+        <p className="mt-3 max-w-2xl text-gray-600">
+          A collection of our family trips, favorite memories, and photo galleries.
+        </p>
+      </section>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6">
+      <section className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {trips.map((trip) => (
-          <div key={trip.title} className="rounded overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <img src={trip.src} alt={trip.title} className="rounded shadow" width={400} height={300}/>
-            <div className="p-4">
-              <h2 className="font-semibold text-lg">{trip.title}</h2>
+          <Link
+            key={trip.slug}
+            href={`/travel/${trip.slug}`}
+            className="group overflow-hidden rounded-2xl bg-white shadow-md transition hover:-translate-y-1 hover:shadow-xl"
+          >
+            <div className="h-52 bg-gray-200">
+              <img
+                src={trip.coverImage}
+                alt={trip.title}
+                className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+              />
             </div>
-          </div>
+
+            <div className="p-5">
+              <h2 className="text-xl font-semibold text-blue-700">{trip.title}</h2>
+              <p className="mt-2 text-sm leading-6 text-gray-600">
+                {trip.description}
+              </p>
+            </div>
+          </Link>
         ))}
-      </div>
+      </section>
     </div>
   );
 }
