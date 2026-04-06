@@ -7,6 +7,12 @@ const trips = [
     description: 'Castles, cobblestone streets, Highland views, and great memories.',
     coverImage: '/images/scotland-2025/full/ed_castle_jw.webp',
   },
+  {
+    title: 'Washington D.C.',
+    slug: 'dc-HandE',
+    description: 'A few moments from Hayden and Elise\'s D.C. trips.',
+    coverImage: '/images/dc-HandE/full/wash2.webp',
+  },
 ];
 
 export default function TravelPage() {
