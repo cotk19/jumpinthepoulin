@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import PhotoGallery from '@/app/components/PhotoGallery';
 
-export default function Scotland2025Page() {
+export default function dcHandEPage() {
   const folder = path.join(process.cwd(), 'public/images/dc-HandE/full');
 
   const files = fs
@@ -18,7 +18,7 @@ export default function Scotland2025Page() {
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600">
           Travel Log
         </p>
-        <h1 className="mt-2 text-4xl font-bold text-blue-800">Scotland 2025</h1>
+        <h1 className="mt-2 text-4xl font-bold text-blue-800">Washington D.C.</h1>
         <p className="mt-4 max-w-3xl text-gray-600">
           A gallery of some of Hayden and Elise's trips to Washington D.C.
         </p>
